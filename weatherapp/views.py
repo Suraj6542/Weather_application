@@ -3,7 +3,8 @@ import requests
 
 def home(request):
     city = request.GET.get('city')
-    url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid=917ffedbd49db304875ac0d243550ecd'
+    key= "get your key from weather api"
+    url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={key}'
     data = requests.get(url).json()
     print(data)
     payload = {
